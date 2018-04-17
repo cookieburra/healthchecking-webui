@@ -1,0 +1,10 @@
+%html
+  %head
+    %title Host status page
+
+  %body
+    %h2 Host status page
+
+    - for ((host, statusHistory) <- statusMap)
+      %h5 Service worker @ #{host}
+      %p #{statusHistory}
