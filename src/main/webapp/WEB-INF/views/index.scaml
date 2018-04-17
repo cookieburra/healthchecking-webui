@@ -10,4 +10,4 @@
 
     - for ((host, statusHistory) <- statusMap)
       %h3 Service worker @ #{host}
-      %p{:class => {if (statusHistory.takeRight(1) == '.') "succeded" else  "failed"}} #{statusHistory}
+      %p{:class => {if (statusHistory.takeRight(1) == ".") "succeded" else "failed" }} #{statusHistory}
