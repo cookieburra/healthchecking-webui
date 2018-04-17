@@ -27,7 +27,7 @@ class StatusReader(path : String) {
   }
 }
 
-class hc_webui extends ScalatraServlet {
+class hc_webui extends ScalatraServlet with ScalateSupport {
 
   get("/") {
     contentType= "text/html"
