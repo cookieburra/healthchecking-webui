@@ -15,7 +15,7 @@ class StatusReader(path : String) {
     for (host <- hosts) {
       val handle = io.Source.fromFile(path ++ host)
 
-      hostStatus +=  (host.substring(0, host.lastIndexOf('.')) -> handle.getLines.toArray.mkString(" ").trim)
+      hostStatus +=  (host.substring(0, host.lastIndexOf('.')) -> handle.getLines.toArray.mkString(" ").trim.takeRight(50))
       handle.close
     }   
   }
